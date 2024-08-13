@@ -1,0 +1,32 @@
+@import "./responsive.scss";
+
+.listPage {
+    display: flex;
+    height: 100vh; /* Ustaw całkowitą wysokość na widok okna */
+  
+    .listContainer {
+      margin-top: 50px;
+      flex: 3;
+      height: 100%; /* Ustaw wysokość na 100% kontenera rodzica */
+  
+      .wrapper {
+        height: 100%;
+        padding-right: 250px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        overflow-y: scroll;
+        padding-bottom: 50px;
+      }
+    }
+  
+    .mapContainer {
+      flex: 2;
+      height: 100%; /* Ustaw wysokość na 100% kontenera rodzica */
+      background-color: #fcf5f3;
+  
+      @include md {
+        display: none;
+      }
+    }
+  }
